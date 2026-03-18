@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- Replication factor: set to 3 on a real cluster, 1 for single-node dev -->
+    <property>
+        <n>dfs.replication</n>
+        <value>3</value>
+    </property>
+    <property>
+        <n>dfs.namenode.name.dir</n>
+        <value>file://${hadoop.tmp.dir}/dfs/name</value>
+    </property>
+    <property>
+        <n>dfs.datanode.data.dir</n>
+        <value>file://${hadoop.tmp.dir}/dfs/data</value>
+    </property>
+    <!-- Block size: 128 MB (good default for our 7GB dataset) -->
+    <property>
+        <n>dfs.blocksize</n>
+        <value>134217728</value>
+    </property>
+    <property>
+        <n>dfs.namenode.http-address</n>
+        <value>localhost:9870</value>
+    </property>
+</configuration>

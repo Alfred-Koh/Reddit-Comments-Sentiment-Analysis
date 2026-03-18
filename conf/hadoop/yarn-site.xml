@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <n>yarn.nodemanager.aux-services</n>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <n>yarn.nodemanager.env-whitelist</n>
+        <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+    </property>
+    <!-- Total node memory available to YARN (adjust to your machine) -->
+    <property>
+        <n>yarn.nodemanager.resource.memory-mb</n>
+        <value>16384</value>
+    </property>
+    <property>
+        <n>yarn.scheduler.maximum-allocation-mb</n>
+        <value>8192</value>
+    </property>
+    <property>
+        <n>yarn.scheduler.minimum-allocation-mb</n>
+        <value>1024</value>
+    </property>
+    <property>
+        <n>yarn.nodemanager.vmem-pmem-ratio</n>
+        <value>2.1</value>
+    </property>
+    <property>
+        <n>yarn.resourcemanager.address</n>
+        <value>localhost:8032</value>
+    </property>
+    <property>
+        <n>yarn.resourcemanager.webapp.address</n>
+        <value>localhost:8088</value>
+    </property>
+</configuration>

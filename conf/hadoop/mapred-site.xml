@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <n>mapreduce.framework.name</n>
+        <value>yarn</value>
+    </property>
+    <property>
+        <n>mapreduce.application.classpath</n>
+        <value>$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*</value>
+    </property>
+    <!-- Memory per map/reduce task -->
+    <property>
+        <n>mapreduce.map.memory.mb</n>
+        <value>2048</value>
+    </property>
+    <property>
+        <n>mapreduce.reduce.memory.mb</n>
+        <value>4096</value>
+    </property>
+    <property>
+        <n>mapreduce.map.java.opts</n>
+        <value>-Xmx1638m</value>
+    </property>
+    <property>
+        <n>mapreduce.reduce.java.opts</n>
+        <value>-Xmx3276m</value>
+    </property>
+    <!-- Compress map output to reduce shuffle traffic -->
+    <property>
+        <n>mapreduce.map.output.compress</n>
+        <value>true</value>
+    </property>
+    <property>
+        <n>mapreduce.map.output.compress.codec</n>
+        <value>org.apache.hadoop.io.compress.SnappyCodec</value>
+    </property>
+    <!-- Sort buffer size -->
+    <property>
+        <n>mapreduce.task.io.sort.mb</n>
+        <value>512</value>
+    </property>
+    <property>
+        <n>mapreduce.task.io.sort.factor</n>
+        <value>100</value>
+    </property>
+    <!-- Combiner threshold -->
+    <property>
+        <n>mapreduce.map.combine.minspills</n>
+        <value>3</value>
+    </property>
+</configuration>
