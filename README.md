@@ -153,3 +153,8 @@ bash scripts/spark/run_ml_pipeline.sh
 | Recall      | 0.783 |
 
 ---
+
+## Team Contributors  
+
+  Alfred Koh, Bhavyasree Kondi, Bhoomika Lnu, Dhruvkumar Kamleshbhai Patel  
+    
